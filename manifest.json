@@ -3,7 +3,7 @@
   "name": "Blurr: for WhatsApp Web",
   "short_name": "Blurr",
   "version": "1.0.0",
-  "description": "Blur chats, names, pictures and media on WhatsApp Web for screen sharing and privacy. Works only in your browser. No internet, no data collected.",
+  "description": "Share your screen, not your chats. Blur messages, names, pictures and media. Hover to read one. No internet, no data.",
   "permissions": [
     "storage"
   ],
