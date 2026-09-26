@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Blurr</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="hd">
+    <img class="logo" src="icons/icon32.png" alt="" width="30" height="30">
+    <div class="t">
+      <div class="n">Blurr</div>
+      <div class="s" id="status">Hiding your chosen parts</div>
+    </div>
+    <button class="sw" role="switch" id="master" aria-label="Privacy on (Alt+B)" title="Privacy on or off (Alt+B)" aria-checked="true"></button>
+  </header>
+
+  <button class="openwa" id="openwa" type="button" hidden>Open WhatsApp Web</button>
+  <button class="pm" id="present" aria-pressed="false">Presentation mode (Alt+P)</button>
+
+  <section class="sec" aria-labelledby="h-parts">
+    <h2 id="h-parts">Parts to hide</h2>
+    <div id="parts"></div>
+  </section>
+
+  <details class="more">
+  <summary>More settings</summary>
+  <section class="sec" aria-labelledby="h-reveal">
+    <h2 id="h-reveal">Reveal</h2>
+    <label class="row"><span class="l">Reveal</span>
+      <select id="reveal-mode"><option value="hover">On hover</option><option value="key">Hold Ctrl</option></select>
+    </label>
+    <label class="row"><span class="l">Delay</span>
+      <select id="reveal-delay"><option value="instant">Instant</option><option value="short">Short</option><option value="long">Long</option></select>
+    </label>
+    <div class="row"><span class="l">Reveal all on window hover<span class="warn">Not safe for screen sharing</span></span>
+      <button class="sw" role="switch" id="allhover" aria-label="Reveal all on window hover" aria-checked="false"></button>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-more">
+    <h2 id="h-more">More</h2>
+    <label class="row"><span class="l">Blur strength</span>
+      <select id="strength"><option value="light">Light</option><option value="medium">Medium</option><option value="strong">Strong</option></select>
+    </label>
+    <label class="row"><span class="l">Blur when idle</span>
+      <select id="idle"><option value="0">Off</option><option value="15">15 s</option><option value="30">30 s</option><option value="60">1 min</option><option value="300">5 min</option></select>
+    </label>
+  </section>
+  </details>
+
+  <footer class="ft">
+    <div id="wa"></div>
+    <div><button class="link" id="report" type="button" hidden>Copy problem report</button></div>
+    <div>No internet. No data collected. <span id="version"></span></div>
+  </footer>
+
+  <script src="settings.js"></script>
+  <script src="surfaces.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
